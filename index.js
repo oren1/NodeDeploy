@@ -7,7 +7,7 @@ const app = express()
 const PORT = 4000
 
 
-mongoose.connect("mongodb://localhost:22017/Tests", (err) => {
+mongoose.connect("mongodb+srv://dbuser:atlas123456@cluster0-rhuii.mongodb.net/test?retryWrites=true&w=majority", (err) => {
 
     if(err) throw err
 
