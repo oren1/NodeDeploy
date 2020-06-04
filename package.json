@@ -1,6 +1,9 @@
 {
   "name": "rest-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.3"
+  },
   "description": "",
   "main": "building rest api",
   "scripts": {
