@@ -4,9 +4,9 @@ const mongoose = require('mongoose')
 const routes = require('./src/Routes/crmRoutes')
 const bodyParser = require('body-parser')
 const app = express()
-const PORT = 4004
+const PORT = 4014
 
-var dev_db_url = 'http://localhost:4000'
+var dev_db_url = 'mongodb://localhost:22017/contacts'
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 mongoose.connect(mongoDB, (err) => {
@@ -14,7 +14,6 @@ mongoose.connect(mongoDB, (err) => {
     if(err) throw err
 
     console.log('successfuly connected')
-
 
 })
 
@@ -26,16 +25,15 @@ app.use(bodyParser.json())
 
 app.use(express.static('public/images'));
 
-
 routes(app)
 
-app.get("/", (req,res) => {
+app.get("*", (req,res) => {
 
-    res.send(`First get request on port ${process.env.PORT || 5000}`)
+    res.send(`First get request on port ${process.env.PORT || PORT}`)
 
 })
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || PORT, () => {
 
     console.log(`Your server is running on port ${PORT}`)
 })
