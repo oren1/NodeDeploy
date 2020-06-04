@@ -31,11 +31,11 @@ routes(app)
 
 app.get("/", (req,res) => {
 
-    res.send(`First get request on port ${PORT}`)
+    res.send(`First get request on port ${process.env.PORT || 5000}`)
 
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
 
     console.log(`Your server is running on port ${PORT}`)
 })
