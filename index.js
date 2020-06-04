@@ -6,8 +6,10 @@ const bodyParser = require('body-parser')
 const app = express()
 const PORT = 4004
 
+var dev_db_url = 'http://localhost:4000'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
-mongoose.connect("mongodb+srv://dbuser:atlas123456@cluster0-rhuii.mongodb.net/test?retryWrites=true&w=majority", (err) => {
+mongoose.connect(mongoDB, (err) => {
 
     if(err) throw err
 
