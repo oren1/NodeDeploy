@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const routes = require('./src/Routes/crmRoutes')
 const bodyParser = require('body-parser')
 const app = express()
-const PORT = 4000
+const PORT = 4004
 
 
 mongoose.connect("mongodb+srv://dbuser:atlas123456@cluster0-rhuii.mongodb.net/test?retryWrites=true&w=majority", (err) => {
