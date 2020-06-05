@@ -7,6 +7,7 @@ const addNewContact = (req,res) => {
     contact.save((err,newContact) => {
 
         if (err) res.send(err)
+        res.status(200)
         res.json(newContact)
 
     })
@@ -19,6 +20,8 @@ function getAllContacts(req,res) {
     Contact.find({}, (err,contacts) => {
 
         if (err) res.send(err)
+        
+        res.status(200)
         res.json(contacts)
 
     })
