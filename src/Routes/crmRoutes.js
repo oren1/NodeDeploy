@@ -6,24 +6,9 @@ const { addNewContact,
 
 const routes = (app) => {
 
-    app.get('/contact',(req,res,next) => {
-
-        console.log(`request from ${req.originalUrl}`)
-        console.log(`request type ${req.method}`)
-        next()
-        
-    },getAllContacts)
+    app.get('/contact',getAllContacts)
     
 
-    .post('/contact',addNewContact)
-
-
-    app.route('/contact/:contactID')
-    .get(getContactById)
-    
-    .put(getContactAndUpdate)
-    
-    .delete(removeContact)
     // app.route('/contact')
     // .get((req,res,next) => {
 
