@@ -25,19 +25,22 @@ app.use(bodyParser.json())
 
 app.use(express.static('public/images'));
 
-// routes(app)
 
-app.get("*", (req,res) => {
-
-    res.send(`First get request on port ${process.env.PORT || PORT}`)
-
-})
-
-app.get('/contact',(req,res) => {
+app.get("/", (req,res) => {
 
     res.send(`First get request on port ${process.env.PORT || PORT}`)
 
 })
+
+
+routes(app)
+
+
+// app.get('/contact',(req,res) => {
+
+//     res.send(`First get request on port ${process.env.PORT || PORT}`)
+
+// })
 
 
 app.listen(process.env.PORT || PORT, () => {
