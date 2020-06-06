@@ -6,8 +6,7 @@ const { addNewContact,
 
 const routes = (app) => {
 
-    app.route('/contact')
-    .get((req,res,next) => {
+    app.get('/contact',(req,res,next) => {
 
         console.log(`request from ${req.originalUrl}`)
         console.log(`request type ${req.method}`)
@@ -16,7 +15,7 @@ const routes = (app) => {
     },getAllContacts)
     
 
-    .post(addNewContact)
+    .post('/contact',addNewContact)
 
 
     app.route('/contact/:contactID')
@@ -25,6 +24,25 @@ const routes = (app) => {
     .put(getContactAndUpdate)
     
     .delete(removeContact)
+    // app.route('/contact')
+    // .get((req,res,next) => {
+
+    //     console.log(`request from ${req.originalUrl}`)
+    //     console.log(`request type ${req.method}`)
+    //     next()
+        
+    // },getAllContacts)
+    
+
+    // .post(addNewContact)
+
+
+    // app.route('/contact/:contactID')
+    // .get(getContactById)
+    
+    // .put(getContactAndUpdate)
+    
+    // .delete(removeContact)
 }
 
 module.exports = routes
