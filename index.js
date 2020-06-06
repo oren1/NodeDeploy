@@ -62,7 +62,10 @@ app.get("/", (req,res) => {
 
 // routes(app)
 
-app.get('/contact',getAllContacts)
+app.get('/contact',(req,res) => {
+
+    res.json({message: `Your server is running on port ${PORT}`})
+})
 
 
 app.listen(process.env.PORT || PORT, () => {
