@@ -9,6 +9,8 @@ const routes = (app) => {
     app.get('/contact',getAllContacts)
     
 
+
+
     // app.route('/contact')
     // .get((req,res,next) => {
 
