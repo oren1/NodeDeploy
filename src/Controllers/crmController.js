@@ -17,16 +17,16 @@ const addNewContact = (req,res) => {
 
 const getAllContacts = (req,res) => {
 
-    res.json({message: `test worked`})
+    // res.json({message: `test worked`})
 
-    // Contact.find({}, (err,contacts) => {
+    Contact.find({}, (err,contacts) => {
 
-    //     if (err) res.send(err)
+        if (err) res.send(err)
         
-    //     res.status(200)
-    //     res.json(contacts)
+        res.status(200)
+        res.json(contacts)
 
-    // })
+    })
 
 }
 
