@@ -39,34 +39,30 @@ app.get("/", (req,res) => {
 })
 
 
-app.route('/contact')
-.get((req,res,next) => {
+// app.route('/contact')
+// .get((req,res,next) => {
 
-    console.log(`request from ${req.originalUrl}`)
-    console.log(`request type ${req.method}`)
-    next()
+//     console.log(`request from ${req.originalUrl}`)
+//     console.log(`request type ${req.method}`)
+//     next()
     
-},getAllContacts)
+// },getAllContacts)
 
 
-.post(addNewContact)
+// .post(addNewContact)
 
 
-app.route('/contact/:contactID')
-.get(getContactById)
+// app.route('/contact/:contactID')
+// .get(getContactById)
 
-.put(getContactAndUpdate)
+// .put(getContactAndUpdate)
 
-.delete(removeContact)
+// .delete(removeContact)
 
 
 // routes(app)
 
-// app.get('/contact',(req,res) => {
-
-//     res.send(`First get request on port ${process.env.PORT || PORT}`)
-
-// })
+app.get('/contact',getAllContacts)
 
 
 app.listen(process.env.PORT || PORT, () => {
