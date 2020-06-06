@@ -15,7 +15,7 @@ const addNewContact = (req,res) => {
 }
 
 
-function getAllContacts(req,res) {
+const getAllContacts = (req,res) => {
 
     Contact.find({}, (err,contacts) => {
 
