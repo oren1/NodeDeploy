@@ -17,7 +17,7 @@ const addNewContact = (req,res) => {
 
 const getAllContacts = (req,res) => {
 
-    res.json({message: `Your server is running on port ${PORT}`})
+    res.json({message: `test worked`})
 
     // Contact.find({}, (err,contacts) => {
 

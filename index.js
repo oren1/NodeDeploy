@@ -60,12 +60,12 @@ app.get("/", (req,res) => {
 // .delete(removeContact)
 
 
-// routes(app)
+routes(app)
 
-app.get('/contact',(req,res) => {
+// app.get('/contact',(req,res) => {
 
-    res.json({message: `Your server is running on port ${PORT}`})
-})
+//     res.json({message: `Your server is running on port ${PORT}`})
+// })
 
 
 app.listen(process.env.PORT || PORT, () => {
