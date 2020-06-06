@@ -34,7 +34,7 @@ app.use(express.static('public/images'));
 
 app.get("/", (req,res) => {
 
-    res.send(`First get request on port ${process.env.PORT || PORT}`)
+    res.send(`First get request on port ${process.env.PORT || PORT} and mobgodb url is ${mongoDB}`)
 
 })
 
