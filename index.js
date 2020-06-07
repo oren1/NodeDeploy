@@ -15,7 +15,10 @@ const { addNewContact,
 var dev_db_url = 'mongodb://localhost:22017/contacts'
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
-mongoose.connect(mongoDB, (err) => {
+mongoose.connect(mongoDB,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }, (err) => {
 
     if(err) throw err
 
